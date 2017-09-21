@@ -6,6 +6,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 
@@ -22,9 +23,18 @@ public class BooTest {
     private Logger logger = LoggerFactory.getLogger(BooTest.class);
     @Autowired
     private TbItemMapper itemMapper;
-    
+
+    @Autowired
+    RedisTemplate<String,String> redisTemplate;
     @Test
     public void testItem() {
-        logger.info(JsonUtils.toJSONString(itemMapper.selectAll()));
+        logger.info(JsonUtils.toJSONString(itemMapper.selectByPrimaryKey(536563l)));
+    }
+
+
+    @Test
+    public void redisTest(){
+
+        System.out.println(redisTemplate.opsForValue().get("baidu"));
     }
 }
