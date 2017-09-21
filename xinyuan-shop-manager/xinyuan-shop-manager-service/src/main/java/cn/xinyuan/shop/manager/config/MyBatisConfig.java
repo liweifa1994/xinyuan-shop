@@ -103,6 +103,7 @@ public class MyBatisConfig {
         datasource.setMaxPoolPreparedStatementPerConnectionSize(maxPoolPreparedStatementPerConnectionSize);
         try {
             datasource.setFilters(filters);
+          
         } catch (SQLException e) {
             logger.error("druid configuration initialization filter", e);
         }
