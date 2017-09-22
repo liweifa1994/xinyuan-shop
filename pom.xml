@@ -82,10 +82,16 @@
                 <artifactId>fastjson</artifactId>
                 <version>${fast.json.version}</version>
             </dependency>
+            <!-- https://mvnrepository.com/artifact/com.github.pagehelper/pagehelper -->
+            <dependency>
+                <groupId>com.github.pagehelper</groupId>
+                <artifactId>pagehelper</artifactId>
+                <version>${pagehelper.version}</version>
+            </dependency>
 
         </dependencies>
     </dependencyManagement>
-    <build>  
+    <build>
         <plugins>  
             <plugin>  
                 <groupId>org.apache.maven.plugins</groupId>  

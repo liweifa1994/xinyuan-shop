@@ -10,4 +10,5 @@ public class Constent {
 
     public static final String closed = "closed";
     public static final String open = "open";
+    public static final String fenHao = ":";
 }
